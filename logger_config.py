@@ -14,13 +14,11 @@ def setup_logger(name):
 
     logger.addFilter(HostnameFilter())
 
-    # Console handler
     ch = logging.StreamHandler()
     ch.setLevel(logging.DEBUG)
     ch.setFormatter(formatter)
     logger.addHandler(ch)
 
-    # File handler
     fh = logging.FileHandler('app.log')
     fh.setLevel(logging.DEBUG)
     fh.setFormatter(formatter)
